@@ -9,8 +9,11 @@ import productRouter from "./routers/product-route"
 dotenv.config()
 const app = express()
 const port =process.env.PORT || 5000
-const url =process.env.MONGO_URL || "mongodb://localhost:27017/amar_Shop"
+//const url =process.env.MONGO_URL || "mongodb://localhost:27017/amar_Shop"
+const url =process.env.MONGO_URL || "mongodb+srv://hossensadek726_db_user:OpkdebStYqcw021u@cluster0.y9krcxj.mongodb.net/?appName=Cluster0"
 connectDb(url)
+
+console.log("database connected",url)
 // medlwer
 app.use(express.json())
 app.use(cors({

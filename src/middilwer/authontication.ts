@@ -8,7 +8,7 @@ interface UserPayload {
 
 export const authontick = (req: Request, res: Response, next: NextFunction) => {
   const token = (req as any).cookies?.token;
-  console.log("this is token from authentics:",token)
+  console.log("this is token from authentics:",token?.decoded);
 
   if (!token) {
     return res.status(400).json({ message: "Token not provided" });
