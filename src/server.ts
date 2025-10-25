@@ -2,7 +2,7 @@ import express, { type Request, type Response } from 'express'
 import cors from 'cors'
 import dotenv from 'dotenv'
 import { connectDb } from './config/db'
-import userRouter from '../src/routers/product-route'
+import userRouter from '../src/routers/user-router'
 import cookieParser from 'cookie-parser'
 //product router
 import productRouter from "../src/routers/product-route"
