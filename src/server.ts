@@ -17,7 +17,7 @@ console.log("database connected",url)
 // medlwer
 app.use(express.json())
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: "https://next-ecom-1-frontend.vercel.app",
   credentials: true
 }));
 app.use(cookieParser())
