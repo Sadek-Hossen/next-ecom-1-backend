@@ -6,7 +6,7 @@ import userRouter from '../src/routers/product-route'
 import cookieParser from 'cookie-parser'
 //product router
 import productRouter from "../src/routers/product-route"
-
+//env config
 dotenv.config()
 const app = express()
 const port =process.env.PORT || 5000
