@@ -19,23 +19,22 @@ export const signIn = async (req:Request,res:Response)=>{
 
           
     
-            const token = jwtToken.sign
-            ({id:user._id.toString(),email:user?.email},JWT_TOKEN,{
-              expiresIn:"7d"
-            })
-            res.cookie("token",token,{
-              httpOnly:true,
-              secure:true,
-              sameSite:'lax',
-              maxAge:7*24*60*60*1000,
+            // const token = jwtToken.sign
+            // ({id:user._id.toString(),email:user?.email},JWT_TOKEN,{
+            //   expiresIn:"7d"
+            // })
+            // res.cookie("token",token,{
+            //   httpOnly:true,
+            //   secure:true,
+            //   sameSite:'lax',
+            //   maxAge:7*24*60*60*1000,
 
-            })
+            // })
 
 
             res.status(200).json({
                 message:"User create succesfully",
-                user,
-                token
+                user
             
             })
 
@@ -76,7 +75,7 @@ export const loginUser = async (req:Request, res:Response) => {
             res.cookie("token",token,{
               httpOnly:true,
               secure:true,
-              sameSite:'lax',
+              sameSite:'none',
               maxAge:7*24*60*60*1000,
 
             })
